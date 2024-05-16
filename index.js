@@ -24,7 +24,7 @@ const { log } = require('console');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-const PORT = 3000; // or any port you prefer
+const PORT = process.env.PORT; // or any port you prefer
 
 app.use(session({
     secret: "top-secret",
